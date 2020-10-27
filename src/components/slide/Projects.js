@@ -30,6 +30,7 @@ class Projects extends Component {
         <div className="content fourth-content">
           <div className="container-fluid">
             <div className="row">
+              <div><h2>projects</h2></div>
               {projects.map((project, i) => {
                 return (
                   <div className="col-md-4 col-sm-6" {...project} key={i}>
@@ -46,16 +47,12 @@ class Projects extends Component {
                         <div className="image">
                           <img src={project.image} alt="" />
                         </div>
-                        <div>
-                        <a rel="nofollow" href="https://www.linkedin.com/in/taiwo-ayoola-39439012a" target="_blank">View LinkedIn profile<i className='fa fa-likedin'></i></a>
-                        </div>
                       </div>
+                      <div className="projectSlide" ><a rel="nofollow" href="https://www.linkedin.com/in/taiwo-ayoola-39439012a" target="_blank">View Website<i className='fa fa-likedin'></i></a></div>
                     </div>
                   </div>
                 )
               })}
-
-
             </div>
           </div>
         </div>

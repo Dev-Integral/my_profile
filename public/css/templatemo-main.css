@@ -335,7 +335,24 @@ nav a:hover::before {
 	background-color: #fff;
 	color: #232323!important;
 }
-
+.projectSlide{
+	margin-top: 10px;
+}
+.projectSlide a{
+	display: inline-block;
+	border: 2px solid #fff;
+	padding: 8px 15px;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.5s;
+}
+.projectSlide a:hover {
+		background-color: #fff;
+		color: #232323!important;
+}
 
 .first-content {
 	padding: 100px;
@@ -558,15 +575,26 @@ nav a:hover::before {
 .fourth-content {
 	padding: 5px;
 }
-
+.fourth-content h2{
+	font-size: 36px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 0.5px;
+	border-bottom: 2px solid #fff;
+	display: inline-block;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	margin-top: 0px;
+}
 .fourth-content .container-fluid {
 	padding-right: 15px;
 	padding-left: 15px;
 }
 
 .fourth-content .container-fluid .col-md-4 {
-	padding-right: 0px;
-	padding-left: 0px;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 .fourth-content .item {
@@ -634,16 +662,31 @@ nav a:hover::before {
 }
 
 
-
 .fifth-content .container-fluid {
-	padding-left: 0px;
-	padding-right: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.fifth-content .container-fluid h2{
+	font-size: 36px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #fff;
+	text-align: left;
+	letter-spacing: 0.5px;
+	border-bottom: 2px solid #fff;
+	display: inline-block;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	margin-top: 0px;
 }
 
 .fifth-content .container-fluid .col-md-6 {
 	padding-left: 0px;
 	padding-right: 0px;
 }
+
+
 
 .fifth-content #map {
 	padding: 50px 0px 50px 50px;

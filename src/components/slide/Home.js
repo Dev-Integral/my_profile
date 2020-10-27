@@ -12,7 +12,7 @@ class Home extends Component {
                         <div className="col-md-9">
                             <h2>AYOOLA TAIWO MORUFF</h2>
                             <p>
-                                A fullstack javascript developer with keen interest in web development and designs. 
+                                A fullstack javascript developer with keen interest in web designs and development. 
 
                             </p>
                             <div className="fb-btn"><a rel="nofollow" href="https://www.linkedin.com/in/taiwo-ayoola-39439012a" target="_blank">View LinkedIn profile<i className='fa fa-likedin'></i></a></div>
