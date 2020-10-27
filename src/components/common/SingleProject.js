@@ -15,7 +15,7 @@ class SingleProject extends Component{
                         </div>
                       </a>
                       <div className="image">
-                        <img src={this.props.biggerImage} alt="" />
+                        <img src={this.props.bigger} alt="" />
                       </div>
                     </div>
                   </div>

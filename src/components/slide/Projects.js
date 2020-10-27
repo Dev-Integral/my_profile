@@ -15,12 +15,12 @@ import scBig from '../images/projects/sc-big.png';
 import sc from '../images/projects/sc-small.png';
 
 const projects = [
-  { image: naija, biggerImage: naijaBig, title: 'Webpage for Nigeria', paragraph: 'Out of love for my country, I hope to depict her beauty in culture and diversity with a website - Built using HTML, CSS and Javascript.', linkToWebpage: '#' },
-  { image: calculator, biggerImage: calculatorBig, title: 'clock design', paragraph: 'A calculator for basic arithmetics - Designed using React', linkToWebpage: '#' },
-  { image: clock, biggerImage: clockBig, title: 'Javascript Clock', paragraph: 'A clock page designed using react', linkToWebpage: '#' },
-  { image: portfolio, biggerImage: portfolioBig, title: 'My Portfolio', paragraph: 'Built using ', linkToWebpage: '#' },
-  { image: miniflix, biggerImage: miniflixBig, title: 'Miniflix', paragraph: 'A Website designed to mock Netflix - Built usin Angular framework.', linkToWebpage: '#' },
-  { image: sc, biggerImage: scBig, title: 'Soul-connect', paragraph: 'A social dating application - Built using angular framework', linkToWebpage: '#' },
+  { image: naija, bigger: naijaBig, title: 'Webpage for Nigeria', paragraph: 'Out of love for my country, I hope to depict her beauty in culture and diversity with a website - Built using HTML, CSS and Javascript.', link: '#' },
+  { image: calculator, bigger: calculatorBig, title: 'clock design', paragraph: 'A calculator for basic arithmetics - Designed using React', link: 'https://react-4calculator.netlify.app' },
+  { image: clock, bigger: clockBig, title: 'Javascript Clock', paragraph: 'A clock page designed using react', link: 'https://integral-clock.netlify.app' },
+  { image: portfolio, bigger: portfolioBig, title: 'My Portfolio', paragraph: 'Built using ', link: 'https://dev-integral.github.io/my_profile/' },
+  { image: miniflix, bigger: miniflixBig, title: 'Miniflix', paragraph: 'A Website designed to mock Netflix - Built using Angular framework.', link: 'https://integral-miniflix.netlify.com' },
+  { image: sc, bigger: scBig, title: 'Soul-connect', paragraph: 'A social dating application - Built using angular framework', link: 'https://soul-connect.netlify.app' },
 
 ]
 class Projects extends Component {
@@ -36,7 +36,7 @@ class Projects extends Component {
                   <div className="col-md-4 col-sm-6" {...project} key={i}>
                     <div className="item">
                       <div className="thumb">
-                        <a href={project.biggerImage} data-lightbox="image-1">
+                        <a href={project.bigger} data-lightbox="image-1">
                           <div className="hover-effect">
                             <div className="hover-content">
                               <h2>{project.title}</h2>
@@ -48,7 +48,7 @@ class Projects extends Component {
                           <img src={project.image} alt="" />
                         </div>
                       </div>
-                      <div className="projectSlide" ><a rel="nofollow" href="https://www.linkedin.com/in/taiwo-ayoola-39439012a" target="_blank">View Website<i className='fa fa-likedin'></i></a></div>
+                      <div className="projectSlide"><a href={project.link} rel="noopener noreferrer" target="_blank">View Website<i className='fa fa-likedin'></i></a></div>
                     </div>
                   </div>
                 )

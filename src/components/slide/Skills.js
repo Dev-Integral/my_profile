@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 //import images
+import secondService from '../images/second_service.jpg';
 import angularLogo from '../images/skills/angular.png';
 import htmlLogo from '../images/skills/html logo.png';
 import cssLogo from '../images/skills/css3 logo.jpg';
@@ -30,16 +31,16 @@ class Skills extends Component {
                       <div className="col-md-6">
                         <div className="left-image">
                         <div><h2>Soft Skills</h2></div>
-                          <img src="img/second_service.jpg" alt="second service" />
+                          <img src={secondService} alt="second service" />
                           <div className="left-content"><p></p>
                             <p>Soft skill sets includes each of the following but not limited to:</p>
-                            <p>
+                            <div>
                               <ul>
-                                <li>Good communication and writing skills.</li>
-                                <li>Critical thinking and analytics.</li>
-                                <li>Highly resourceful, diplomatic and perceptive.</li>
+                                <li><p>Good communication and writing skills.</p></li>
+                                <li><p>Critical thinking and analytics.</p></li>
+                                <li><p>Highly resourceful, diplomatic and perceptive.</p></li>
                               </ul>
-                            </p>
+                            </div>
                           </div>        
                         </div>
                       </div>

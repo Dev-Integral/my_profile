@@ -24,7 +24,13 @@ class DownloadFile extends Component{
     render(){
         return(
             <div>
-                <div className="main-btn"><a href='#' onClick={this.DownloadMyData}>Click to download resume <i className="fa fa-download" /></a></div>
+                <div className="download-btn">
+                    <button className="downloader"
+                    onClick={this.DownloadMyData}>
+                        Click to download resume 
+                        <i className="fa fa-download" />
+                    </button>
+                </div>
             </div>
         )
     }

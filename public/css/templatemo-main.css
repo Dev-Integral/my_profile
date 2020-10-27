@@ -329,11 +329,26 @@ nav a:hover::before {
 .slides .slide img {
   width: 100%;
 }
-
-
+.download-btn .downloader{
+	display: inline-block;
+	padding: 8px 15px;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #232323;
+	text-decoration: none;
+	
+}
+.download-btn .downloader:hover {
+		background-color: #232323;
+		color: #fff!important;
+		transition: all 0.5s;
+		transition: all 0.5s;
+		border: 2px solid #fff;
+}
 .main-btn a:hover {
 	background-color: #fff;
-	color: #232323!important;
+	color: #333!important;
 }
 .projectSlide{
 	margin-top: 10px;
@@ -347,6 +362,7 @@ nav a:hover::before {
 	letter-spacing: 1px;
 	color: #fff;
 	text-decoration: none;
+	transition: all 0.5s;
 	transition: all 0.5s;
 }
 .projectSlide a:hover {

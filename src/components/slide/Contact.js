@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FieldSet from '../common/FieldSet';
 
-
+import firstBig from '../images/first_big_item.jpg';
 const fields = {
     sections: [
         [
@@ -23,7 +23,7 @@ class Contact extends Component {
                         <div className="col-md-6">
                             <div id="map">
                                 <h2>ContactMe</h2>
-                                <img src="/img/first_big_item.jpg" alt="contact me" />
+                                <img src={firstBig} alt="contact me" />
                             </div>
                         </div>
                         <div className="col-md-6">
