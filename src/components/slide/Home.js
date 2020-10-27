@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DownloadFile from '../common/DownloadFile';
 import author from '../images/integral.jpg'
 class Home extends Component {
     render() {
@@ -13,9 +14,8 @@ class Home extends Component {
                             <h2>AYOOLA TAIWO MORUFF</h2>
                             <p>
                                 A fullstack javascript developer with keen interest in web designs and development. 
-
                             </p>
-                            <div className="fb-btn"><a href="https://www.linkedin.com/in/taiwo-ayoola-39439012a" rel="noopener noreferrer" target="_blank">View LinkedIn profile<i className='fa fa-likedin'></i></a></div>
+                            <DownloadFile />
                         </div>
                     </div>
                 </div>

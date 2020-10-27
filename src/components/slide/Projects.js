@@ -15,10 +15,10 @@ import scBig from '../images/projects/sc-big.png';
 import sc from '../images/projects/sc-small.png';
 
 const projects = [
-  { image: naija, bigger: naijaBig, title: 'Webpage for Nigeria', paragraph: 'Out of love for my country, I hope to depict her beauty in culture and diversity with a website - Built using HTML, CSS and Javascript.', link: '#' },
+  { image: naija, bigger: naijaBig, title: 'Webpage for Nigeria', paragraph: 'Out of love for Nigeria, depicting her beauty in terms of culture and diversity - Built using HTML, CSS and JS.', link: 'https://lovefornaija.netlify.app/' },
   { image: calculator, bigger: calculatorBig, title: 'clock design', paragraph: 'A calculator for basic arithmetics - Designed using React', link: 'https://react-4calculator.netlify.app' },
   { image: clock, bigger: clockBig, title: 'Javascript Clock', paragraph: 'A clock page designed using react', link: 'https://integral-clock.netlify.app' },
-  { image: portfolio, bigger: portfolioBig, title: 'My Portfolio', paragraph: 'Built using ', link: 'https://dev-integral.github.io/my_profile/' },
+  { image: portfolio, bigger: portfolioBig, title: 'My Portfolio', paragraph: 'Portfolio page - Built using react, bootstrap and formspree ', link: 'https://dev-integral.github.io/my_profile/' },
   { image: miniflix, bigger: miniflixBig, title: 'Miniflix', paragraph: 'A Website designed to mock Netflix - Built using Angular framework.', link: 'https://integral-miniflix.netlify.com' },
   { image: sc, bigger: scBig, title: 'Soul-connect', paragraph: 'A social dating application - Built using angular framework', link: 'https://soul-connect.netlify.app' },
 

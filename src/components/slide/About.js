@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import DownloadFile from '../common/DownloadFile';
 import aboutImage from '../images/about_image.jpg';
 
 class About extends Component {
@@ -19,7 +18,12 @@ class About extends Component {
                                         More details in the file below.
                                     </p>
                                     <div>
-                                        <DownloadFile />
+                                        <div className="main-btn">
+                                            <a href="https://www.linkedin.com/in/taiwo-ayoola-39439012a" rel="noopener noreferrer" target="_blank">
+                                                View LinkedIn profile
+                                                <i className='fa fa-likedin'></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
