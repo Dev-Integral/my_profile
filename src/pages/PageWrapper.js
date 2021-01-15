@@ -17,9 +17,9 @@ class PageWrapper extends Component {
                     </div>
                     <ul>
                         <li><a href="#1"><i className="fa fa-home"></i> <em>Home</em></a></li>
-                        <li><a href="#2"><i className="fa fa-id-card"></i> <em>About</em></a></li>
+                        <li><a href="#2"><i className="fa fa-image"></i> <em>Projects</em></a></li>
                         <li><a href="#3"><i className="fa fa-tasks"></i> <em>Skills</em></a></li>
-                        <li><a href="#4"><i className="fa fa-image"></i> <em>Projects</em></a></li>
+                        <li><a href="#4"><i className="fa fa-id-card"></i> <em>About</em></a></li>
                         <li><a href="#5"><i className="fa fa-envelope"></i> <em>Contact</em></a></li>
                     </ul>
                 </nav>

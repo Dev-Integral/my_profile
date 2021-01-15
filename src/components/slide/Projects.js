@@ -16,7 +16,7 @@ import sc from '../images/projects/sc-small.png';
 
 const projects = [
   { image: naija, bigger: naijaBig, title: 'Webpage for Nigeria', paragraph: 'Out of love for Nigeria, depicting her beauty in terms of culture and diversity - Built using HTML, CSS and JS.', link: 'https://lovefornaija.netlify.app/' },
-  { image: calculator, bigger: calculatorBig, title: 'clock design', paragraph: 'A calculator for basic arithmetics - Designed using React', link: 'https://react-4calculator.netlify.app' },
+  { image: calculator, bigger: calculatorBig, title: 'Calculator', paragraph: 'A calculator for basic arithmetics - Designed using React', link: 'https://react-4calculator.netlify.app' },
   { image: clock, bigger: clockBig, title: 'Javascript Clock', paragraph: 'A clock page designed using react', link: 'https://integral-clock.netlify.app' },
   { image: portfolio, bigger: portfolioBig, title: 'My Portfolio', paragraph: 'Portfolio page - Built using react, bootstrap and formspree ', link: 'https://dev-integral.github.io/my_profile/' },
   { image: miniflix, bigger: miniflixBig, title: 'Miniflix', paragraph: 'A Website designed to mock Netflix - Built using Angular framework.', link: 'https://integral-miniflix.netlify.com' },
@@ -26,7 +26,7 @@ const projects = [
 class Projects extends Component {
   render() {
     return (
-      <div className="slide" id="4">
+      <div className="slide" id="2">
         <div className="content fourth-content">
           <div className="container-fluid">
             <div className="row">

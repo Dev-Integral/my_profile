@@ -5,7 +5,7 @@ class About extends Component {
     render() {
         return (
             <div>
-                <div className="slide" id="2">
+                <div className="slide" id="4">
                     <div className="content second-content">
                         <div className="container-fluid">
                             <div className="col-md-6">

@@ -10,9 +10,9 @@ class Slides extends Component {
     return (
       <div className="slides">
         <Home />
-        <About />
-        <Skills />
         <Projects />
+        <Skills />     
+        <About />
         <Contact />
       </div>
     )
