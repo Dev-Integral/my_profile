@@ -1,10 +1,9 @@
 import React from 'react';
-import './App.css';
-import PageWrapper from './pages/PageWrapper';
+import Home from './pages/Home';
 function App() {
     return (
         <div className="App">
-            <PageWrapper />
+            <Home />
         </div>
     );
 }
