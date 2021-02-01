@@ -16,6 +16,12 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: .5s;
+}
+nav.sticky{
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 nav .logo{
     color: #fff;
@@ -24,6 +30,9 @@ nav .logo{
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 2px;
+}
+nav.sticky .logo{
+    color: #111;
 }
 nav ul{
     position: relative;
@@ -39,6 +48,9 @@ nav ul li a{
     color: #fff;
     text-decoration: none;
 }
+nav.sticky ul li a{
+    color: #111;
+}
 
 section{
     padding: 100px;
@@ -46,7 +58,7 @@ section{
 .banner{
      position: relative;
      min-height: 100vh;
-     background: url('../images/bp1.jpg');
+     background: url('../images/banner.jpg');
      background-size: cover;
      background-position: right;
      display: flex;
@@ -83,7 +95,7 @@ section{
     font-weight: 500;
 }
 .heading{
-    width: 100%;
+    width: 100%; 
     text-align: center;
     margin-bottom: 30px;
     color: #111; 
@@ -107,4 +119,75 @@ section{
 }
 img{
     max-width: 100%;
+}
+.services{
+    background: #111;
+}
+.heading .white{
+    color: #fff;
+}
+.services .content{
+    display: flex;
+    justify-content: content;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.services .content .servicesBx{
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 340px;
+    text-align: center;
+    margin: 20px;
+    transition: 0.5s;
+}
+.services .content .servicesBx:hover{
+    background: #2196f3;
+}
+.services .content .servicesBx img{
+    max-width: 80px;
+    filter: invert(1);
+}
+.services .content .servicesBx h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+.work .content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.work .content .workBx{
+    width: 50%;
+    padding: 20px;
+}
+.work .content .workBx img{
+    max-width: 100%;
+}
+.testimonials{
+    background: #f7f7f7;
+}
+.testimonials .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.testimonials .content .testimonialBx{
+    max-width: calc(50% - 40px);
+    padding: 60px 40px;
+    margin: 20px;
+    background: #2196f3;
+}
+.testimonials .content .testimonialBx p{
+    color: #fff;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 300 ;
+}
+.testimonials .content .testimonialBx h3{
+    margin-top: 40px;
+    text-align: end;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
 }
