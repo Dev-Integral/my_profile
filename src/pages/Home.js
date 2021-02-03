@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useRef } from 'react';
 import '../styles/home.css';
 import about from '../images/img1.jpg';
 import icon1 from '../images/icon1.png';
@@ -11,30 +11,72 @@ import product1 from '../images/product1.jpg';
 import product2 from '../images/product2.jpg';
 import product3 from '../images/product3.jpg';
 import product4 from '../images/product4.jpg';
-/* global $ */
-class PageWrapper extends Component {
-    render() {
-        const handleScroll = (incoming) =>{
-            console.log({incoming});
-            $('one').scroll('#home'); 
+
+const PageWrapper = () => {
+        const serviceSection = useRef(null);
+        const homeSection = useRef(null);
+        const aboutSection = useRef(null);
+        const testimonialSection = useRef(null);
+        const workSection = useRef(null);
+        const contactSection =useRef(null);
+
+
+        const gotoSection = (value) => {
+            switch(value){
+                case 'service':
+                    window.scrollTo({top:serviceSection.current.offsetTop, 
+                    behavior: 'smooth'})
+                    break;
+                case 'about':
+                    window.scrollTo({top:aboutSection.current.offsetTop, 
+                    behavior: 'smooth'});
+                    break;
+                case 'testimonial':
+                    window.scrollTo({top:testimonialSection.current.offsetTop, 
+                    behavior: 'smooth'});
+                    break;
+                case 'work':
+                    window.scrollTo({top:workSection.current.offsetTop, 
+                    behavior: 'smooth'});
+                    break;
+                case 'contact':
+                    window.scrollTo({top:contactSection.current.offsetTop, 
+                    behavior: 'smooth'});
+                    break;
+                
+                default:
+                    window.scrollTo({top:homeSection.current.offsetTop, 
+                    behavior: 'smooth'});
+                    break;
         }
+        };
+        window.addEventListener('scroll', function(){
+            let nav = document.querySelector('nav');
+            nav.classList.toggle('sticky', window.scrollY >0); 
+        })
+        const toggleMenu = ()=>{
+            let menuToggle = document.querySelector('.toggle');
+            let menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+
         return (
             <div>
                 <header>
                     <nav>
-                        <a href="!#" className="logo" >Portfolio</a>
-                        <div className="toggle"></div>
-                        <ul>
-                            <li><a href="#home" className='one' onClick={handleScroll('home')}><i className="fa fa-home"></i><em>Home</em></a></li>
-                            <li><a href="#about"><i className="fa fa-image"></i><em>About</em></a></li>
-                            <li><a href="#services"><i className="fa fa-tasks"></i><em>Services</em></a></li>
-                            <li><a href="work"><i className="fa fa-id-card"></i><em>Work</em></a></li>
-                            <li><a href="#testimonial"><i className="fa fa-envelope"></i><em>Testimonial</em></a></li>
-                            <li><a href="#contact"><i className="fa fa-contact"></i><em>contact</em></a></li>
+                        <a onClick={()=>{gotoSection('home'); toggleMenu()}} href="!#" className="logo" ><i className="fa fa-home"></i>Portfolio</a>
+                        <div className="toggle" onClick={toggleMenu}></div>
+                        <ul className="menu">
+                            <li onClick={()=>{gotoSection('about'); toggleMenu()}}><a href="#about"><em>About</em></a></li>
+                            <li onClick={()=>{gotoSection('service'); toggleMenu()}}><a href="#services"><em>Services</em></a></li>
+                            <li onClick={()=>{gotoSection('work'); toggleMenu()}}><a href="work"><em>Work</em></a></li>
+                            <li onClick={()=>{gotoSection('testimonial'); toggleMenu()}}><a href="#testimonial"><em>Testimonial</em></a></li>
+                            <li onClick={()=>{gotoSection('contact'); toggleMenu()}}><a href="#contact"><em>contact</em></a></li>
                         </ul>
                     </nav>
                 </header>
-                <section className="banner" id="home">
+                <section className="banner" ref={homeSection}>
                     <div className="textBx">
                         <h2>Hello, I'm</h2>
                         <h2 className="fullname">Ayoola Taiwo.</h2>
@@ -42,7 +84,7 @@ class PageWrapper extends Component {
                         <a href="#7" className="btn">About Me</a>
                     </div>
                 </section>
-                <section className="about" id="about">
+                <section className="about" ref={aboutSection}>
                     <div className="heading">
                         <h2>About Me</h2>
                     </div>
@@ -65,7 +107,7 @@ class PageWrapper extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="services" id="services">
+                <section className="services" ref={serviceSection}>
                     <div className="heading white">
                         <h2>Our Services</h2>
                         <p>Lorem ipsum smelfgm flgdmdf</p>
@@ -109,7 +151,7 @@ class PageWrapper extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="work" id="work">
+                <section className="work" ref={workSection}>
                     <div className="heading">
                         <h2>Our Latest Work</h2>
                         <p>Lorem ipsum smelfgm flgdmdf fm vgfkjgnlg mbfd.sdfjnfg g fg
@@ -133,7 +175,7 @@ class PageWrapper extends Component {
                             <a className="btn" href="#8">View more</a></div>
                     </div>
                 </section>
-                <section className="testimonials" id="testimonial">
+                <section className="testimonials" ref={testimonialSection}>
                     <div className="heading">
                         <h2>Testimonials</h2>
                         <p>Lorem ipsum smelfgm flgdmdf fm vgfkjgnlg mbfd.sdfjnfg g fg
@@ -157,7 +199,7 @@ class PageWrapper extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="contact" id="contact">
+                <section className="contact" ref={contactSection}>
                 <div className="heading white">
                     <h2>Contact Us</h2>
                     <p>Lorem ipsum smelfgm flgdmdf fm vgfkjgnlg mbfd.sdfjnfg</p>
@@ -210,20 +252,7 @@ class PageWrapper extends Component {
                 <div className="copyright">
                     <p>Copyright &copy; 2021 Integral Practicals. All Rights Reserved</p>
                 </div>
-
-                <script type="text/javascript">
-                {window.addEventListener('scroll', function(){
-                    let nav = document.querySelector('nav');
-                    nav.classList.toggle('sticky', window.scrollY >0); 
-                })
-                //onClick={e=>{
-                  //    $('.myFile').trigger('click');
-                  //}}
-                };
-                </script>
-                {this.props.children}
             </div>
         )
     }
-};
 export default PageWrapper;

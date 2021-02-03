@@ -19,6 +19,9 @@ nav{
     align-items: center;
     transition: .5s;
 }
+nav a i{
+    margin-right: 10px;
+}
 nav.sticky{
     background: #fff;
     padding: 20px 100px;
@@ -48,6 +51,9 @@ nav ul li a{
     margin: 0 15px;
     color: #fff;
     text-decoration: none;
+}
+nav .test{
+    color:#2196f3;
 }
 nav.sticky ul li a{
     color: #111;
@@ -285,11 +291,13 @@ img{
 @media (max-width: 991px){
     nav, nav.sticky{
         padding: 20px 50px;
+        z-index: 50;
+
     }
     .menu{
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 68px;
+        left: -100%;
         display: block;
         padding: 100px 50px;
         text-align: center;
@@ -297,5 +305,98 @@ img{
         height: 100vh;
         background: #fff;
         transition: 0.5s;
+        z-index: 49;
+        border-top: 1px solid rgba(0,0,0,0.2);
     }
+    .menu.active{
+        left: 0%;
+    }
+    nav ul li a{
+        color: #111;
+        font-size: 24px;
+        margin: 10px;
+    }
+    .toggle{
+        width: 40px;
+        height: 40px;
+        background: url('../images/menu.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    .toggle.active{
+        background: url('../images/close.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+    nav.sticky .toggle{
+        filter: invert(1);
+    }
+    section{
+        padding: 100px 50px;
+    }
+    .banner{
+        padding: 150px 50px  100px;
+    }
+    .banner h2{
+        font-size: 1.5em;
+    }
+    .banner h3{
+        font-size: 1em;
+    }
+    .btn{
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .heading h2{
+        font-size: 24px;
+    }
+    .contentBx h3{
+        font-size: 20px;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .w50{
+        margin-bottom: 20px;
+    }
+    .services .content{
+        justify-content: center;
+    }
+    .services .content .servicesBx{
+        margin: 10px;
+    }
+    .work .content .workBx{
+        width: 100%;
+        padding: 10px;
+    }
+    .testimonials .content .testimonialBx{
+        max-width: calc(100% - 20px);
+        padding: 40px 20px;
+        margin: 10px;
+        background: #2196f3; 
+    }
+    .testimonials .content .testimonialBx h3{
+        margin-top: 20px;
+    }
+    .contactInfo{
+        min-width: 40%;
+        margin: 20px 0;
+    }
+}
+@media(max-width: 600px){
+    nav, nav.sticky{
+        padding: 20px 20px;
+    }
+    .banner{
+        padding: 150px 20px 100px;
+    }
+    section{
+        padding: 100px 20px;
+    }
+
 }
