@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ContactTest from '../common/ContactTest';
 import DownloadFile from '../common/DownloadFile';
 import author from '../images/integral.jpg'
 class Home extends Component {
@@ -14,8 +15,9 @@ class Home extends Component {
                             <h2>AYOOLA TAIWO MORUFF</h2>
                             <p>
                                 A fullstack javascript developer with keen interest in web designs and development. 
-                            </p>
+                            </p>                            
                             <DownloadFile />
+                            <ContactTest/>
                         </div>
                     </div>
                 </div>
