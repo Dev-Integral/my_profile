@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
   "homepage": "http://Dev-Integral.github.io/my_profile",
+=======
+>>>>>>> 11c8d8182be7606d87d8a0f0917bcb0dd1f68e66
   "name": "my_profile",
   "version": "0.1.0",
   "private": true,
@@ -12,8 +15,11 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
+<<<<<<< HEAD
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+=======
+>>>>>>> 11c8d8182be7606d87d8a0f0917bcb0dd1f68e66
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -33,8 +39,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
   },
   "devDependencies": {
     "gh-pages": "^3.1.0"
+=======
+>>>>>>> 11c8d8182be7606d87d8a0f0917bcb0dd1f68e66
   }
 }
