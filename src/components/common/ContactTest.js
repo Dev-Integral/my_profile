@@ -142,8 +142,4 @@ const ContactTest = () => {
         </div>
     )
 }
-<<<<<<< HEAD
 export default ContactTest;
-=======
-export default ContactTest;
->>>>>>> 3806c73f64580ac93243392be5504cb41bf18a31
