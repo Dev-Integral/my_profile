@@ -5,8 +5,6 @@ const ContactTest = () => {
     const [nameError, setNameError] = useState(false);
     const [email, setEmail] = useState('');
     const [emailError, setEmailError] = useState(false);
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [phoneError, setPhoneError] = useState(false);
     const [subject, setSubject] = useState('');
     const [subjectError, setSubjectError] = useState(false);
     const [message, setMessage] = useState('');
@@ -35,7 +33,6 @@ const ContactTest = () => {
                     setStatus('SUCCESS');
                     setName('');
                     setMessage('');
-                    setPhoneNumber('');
                     setSubject('');
                     setEmail('');
                     setHidden(false);
@@ -53,13 +50,11 @@ const ContactTest = () => {
     const validateInput = (data) => {
         let nameFormat = /^([A-Za-z]+?)\s([A-Za-z]+?)$/                 // for single name /^[A-Za-z]+$/;
         let emailFormat = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
-        let phoneFormat = /^\d+$/;
         switch (data.type) {
             case 'name':
                 setStatus('');
                 const firstname = data.value.split(' ')[0];
                 const lastname = data.value.split(' ')[1];
-                
                 if (firstname?.length > 1 && lastname?.length > 1) {
                     data.value.match(nameFormat) ? setNameError(false) : setNameError(true);
                 } else { setNameError(true) }
@@ -67,10 +62,6 @@ const ContactTest = () => {
             case 'email':
                 setStatus('');
                 data.value.match(emailFormat) ? setEmailError(false) : setEmailError(true);
-                break;
-            case 'phone':
-                setStatus('');
-                data.value.match(phoneFormat) ? setPhoneError(false) : setPhoneError(true);
                 break;
             case 'subject':
                 setStatus('');
