@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Home from './slide/Home';
 import About from './slide/About';
 import Skills from './slide/Skills';
 import Projects from './slide/Projects';
 import Contact from './slide/Contact';
 
-class Slides extends Component {
-  render() {
-    return (
-      <div className="slides">
-        <Home />
-        <Projects />
-        <Skills />     
-        <About />
-        <Contact />
-      </div>
-    )
-  }
+const Slides = () => {
+  
+  return (
+
+    <div className="slides">
+      <div><Home /></div>
+      <div><Projects /></div>
+      <Skills />
+      <About />
+      <Contact />
+    </div>
+  )
 };
 
 export default Slides;

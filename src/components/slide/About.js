@@ -1,8 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import aboutImage from '../images/about_image.jpg';
+// import {Link} from 'react-router-dom';
 
-class About extends Component {
-    render() {
+const About =()=>{
+    const gotoLinkedIn =()=>{
+        window.open("https://www.linkedin.com/in/taiwo-ayoola-39239012a/");
+        window.location.reload(false);
+    }
         return (
             <div>
                 <div className="slide" id="4">
@@ -18,11 +22,11 @@ class About extends Component {
                                         More details in the file below.
                                     </p>
                                     <div>
-                                        <div className="main-btn">
-                                            <a href="https://www.linkedin.com/in/taiwo-ayoola-39439012a" rel="noopener noreferrer" target="_blank">
+                                        <div className="main-btn" onClick={()=> gotoLinkedIn()}>
+                                            <a href='!#' >
                                                 View LinkedIn profile
                                                 <i className='fa fa-likedin'></i>
-                                            </a>
+                                            </a>                       
                                         </div>
                                     </div>
                                 </div>
@@ -38,6 +42,5 @@ class About extends Component {
             </div>
         )
     }
-}
 
 export default About;
